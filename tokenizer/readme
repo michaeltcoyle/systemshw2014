@@ -1,0 +1,4 @@
+This program takes two arguments, a set of delimiters, and a character stream to be tokenized.
+All escape characters are replaced with their hexadecimal value in brackets, and are treated as
+a single character. ie: \n = [0x0a], however it is still only one character and cannot be broken up
+during tokenization.

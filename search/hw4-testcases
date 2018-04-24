@@ -1,0 +1,47 @@
+test 1: ./search testwrite
+	sa had mary 
+
+expected output: test1.txt
+		 test2.txt
+
+Correct.
+
+
+
+test 2: ./search testwrite
+	so mary a
+
+espected output: test1.txt
+		 test2.txt
+
+Correct.
+
+
+
+test 3: ./search testwrite
+	o
+
+expected output: Error, quitting.
+
+Correct.
+
+test 4: ./search testwrittttit
+
+expected output: Error, quitting.
+
+Correct (however it asks for input, and realizes the error afterwards.)
+
+
+test 5: ./search testwrite
+	q
+
+expected output: "graceful exit"
+
+Correct.
+
+test 6: ./search testwrite
+	sa aksdaksfd
+
+expected output: "no terms found"
+
+Correct.

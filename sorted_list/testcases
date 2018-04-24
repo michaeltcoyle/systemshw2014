@@ -1,0 +1,3 @@
+Test case 1: (Correct) ["f","d","b"] is the list, and an iterator is created.  Then "z" is inserted (in the beginning).  SLNextItem calls with the iterator will return "f","d","b",NULL in that order.
+Test case 2: (Correct) ["f","d","b"] is the list, and an iterator is created.  SLNextItem is called 3 times and returns "f","d","b".  "a" is then inserted.  The next call to SLNextItem returns NULL.
+Test case 3: (Correct) ["f","d","b"] is the list, and an iterator is created.  SLNextItem is called once, so the iterator points to "d". "d" is then removed with SLRemove.  Future calls to SLNextItem will return "b" and NULL in that order.

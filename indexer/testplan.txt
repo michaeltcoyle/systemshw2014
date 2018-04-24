@@ -1,0 +1,14 @@
+Test Case: ./index testwrite testread1
+	-target is a directory, with 2 directories inside, each containing a file with tokens
+	-program outputs "success" and expected output is contained in the testwrite file. (testwrite exists)
+	-working
+
+Test Case: ./index testwrite2 testread2 
+	-target read file is an empty document, and the write file does not exist
+	-program outputs that it has created the writefile, and nothing is inside of it. 
+	-working
+
+Test Case: ./index testwrite testread3
+	-target write file exists, target read file is a file (not directory)
+	-program outputs success, writefile contains the correct tokens with formatting
+	-working

@@ -1,0 +1,73 @@
+test case 1:
+./tokenizer "asd" "asdkasfhasdkasdk"
+
+Expected / Actual output:
+
+k
+fh
+k
+k
+
+--------------------------------------------------------------
+test case 2:
+./tokenizer "" "hello \\\\world \\lol \\\"test\\"
+
+Expected / Actual output:
+
+hello [0x5c]world lol [0x22]test
+
+--------------------------------------------------------------
+test case 3:
+
+./tokenizer "l" "hello \\\\world \\lol \\\"test\\"
+
+Expected / Actual output:
+
+he
+o [0x5c]wor
+d
+o
+ [0x22]test
+
+--------------------------------------------------------------
+test case 4:
+
+./tokenizer "l\n" "hello \\\\world \\lol \\\"test\\"
+
+Expected / Actual Output:
+
+he
+o [0x5c]wor
+d
+o
+ [0x22]test
+
+--------------------------------------------------------------
+test case 5:
+
+./tokenizer "ll" "hello lllilll"
+
+Expected / Actual Output:
+
+he
+o
+i
+
+--------------------------------------------------------------
+test case 6:
+
+./tokenizer "n" "lol\n"
+
+Expected / Actual Output:
+
+lol[0x0a]
+
+---------------------------------------------------------------
+test case 7:
+
+./tokenizer "n" "lol\\"
+
+Expected / Actual Output:
+
+lol
+
